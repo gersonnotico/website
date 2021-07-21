@@ -16,10 +16,16 @@ const TitleStyled = styled.div`
     h2{
         color: var(--white-color);
         font-size: 3.1rem;
-        font-weight: 6000;
+        font-weight: 600;
         text-transform: uppercase;
         position: relative;
-        padding-bottom: .8rem;
+        padding-bottom: .7rem;
+        @media screen and (max-width: 496px){
+            font-size: 2.8rem;
+        }
+        @media screen and (max-width: 360px){
+            font-size: 1.5rem;
+        }
         &::before{
             content: "";
             position: absolute;
@@ -40,13 +46,22 @@ const TitleStyled = styled.div`
             left: 0;
         }
         span{
-            font-weight: 700;
+            font-weight:900;
             color: rgba(25,29,43,44);
             font-size: 5rem;
             position: absolute;
             left: 0;
             top: 30%;
             z-index: -1;
+            @media screen and (max-width: 620px){
+                font-size: 3rem;
+            }
+            @media screen and (max-width: 496px){
+                font-size: 2rem;
+            }
+            @media screen and (max-width: 360px){
+                font-size: 1.5rem;
+            }
         }
     }
 

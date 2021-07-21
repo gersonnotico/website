@@ -60,6 +60,6 @@ const SkillsStyled = styled.section`
         @media screen and (max-width:700px){
             grid-template-columns: repeat(1, 1fr);
         }
-        }
+    }
 `;
 export default Skills;

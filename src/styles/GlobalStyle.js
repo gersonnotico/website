@@ -94,11 +94,18 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1rem;
     }
     h1{
-        font-size: 2rem;
+        font-size: 4rem;
         color: var(--white-color);
         span{
+            font-size: 4rem;
+            @media screen and (max-width: 502px){
+                font-size: 2rem;
+            }
+        }
+        @media screen and (max-width: 502px){
             font-size: 2rem;
         }
+
     }
     span{
         color: var(--primary-color);
@@ -131,6 +138,7 @@ const GlobalStyle = createGlobalStyle`
       right: 5%;
       top: 3%;
       z-index: 15;
+      display: none;
       svg{
           font-size: 3rem;
       }
@@ -140,7 +148,9 @@ const GlobalStyle = createGlobalStyle`
         z-index: 20;
     }
   @media screen and (max-width:1200px){
-
+    .ham-burger-menu{
+        display: block;
+    }
   }
 
   

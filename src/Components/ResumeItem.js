@@ -19,6 +19,12 @@ function ResumeItem({year, title, subTitle, text}) {
 
 const ResumeItemStyled = styled.div`
     display: flex;
+    p, h5, h6{
+        @media screen and (max-width: 421px){
+            font-size: 80%;
+        }
+    }
+    
     &:not(:last-child){
         padding-bottom: 3rem;
     }

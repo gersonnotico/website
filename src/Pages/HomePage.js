@@ -39,7 +39,6 @@ const HomePageStyled = styled.header`
     width: 100%;
     height: 100vh;
     position: relative;
-    left:0;
 
     .p-particles-js{
         position: absolute;
