@@ -5,11 +5,48 @@ import AboutPage from './Pages/AboutPage';
 import ResumePage from './Pages/ResumePage';
 import PortfoliosPage from './Pages/PortfoliosPage';
 import ContactPage from './Pages/ContactPage';
-import {Switch, Route} from 'react-router';
+import {Switch as Switching, Route} from 'react-router';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
+import Switch from '@material-ui/core/Switch';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [theme, setTheme] = useState('dark-theme');
+  const [checked, setChecked] = useState(false);
+
+  useEffect(()=>{
+    document.documentElement.className=theme;
+  }, [theme])
+
+  const themeToggler=() =>{
+    if(theme ==='light-theme'){
+      setTheme('dark-theme');
+      setChecked(false)
+    } else{
+      setTheme('light-theme');
+      setChecked(true)
+    }
+  }
+
   return (
     <div className="App">
+      <div className="theme">
+        <div className="light-dark-mode">
+          <div className="left-content">
+            <Brightness4Icon />
+          </div>
+          <div className="right-content">
+            <Switch
+              value="" 
+              checked={checked}
+              inputProps={{'aria-abel': ''}}
+              size="medium"
+              onClick={themeToggler}
+              />
+            </div>
+        </div>
+      </div>
+
       <Sidebar />
       <MainContentStyled>
         <div className="lines">
@@ -19,7 +56,7 @@ function App() {
           <div className="line-4"></div>
         </div>
 
-        <Switch>
+        <Switching>
           <Route path="/" exact>
             <HomePage />
           </Route>
@@ -35,7 +72,7 @@ function App() {
           <Route path="/contact" exact>
             <ContactPage />
           </Route>
-        </Switch>
+        </Switching>
       </MainContentStyled>
     </div>
 
