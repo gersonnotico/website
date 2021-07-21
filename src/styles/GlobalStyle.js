@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
 */
 .light-theme{
     --primary-color: #007bff;
-    --secondary-color: #6c757d;
+    --secondary-color: #ff7675;
     --background-dark-color: #F1F1F1;
     --background-dark-grey: #e4e4e4;
     --border-color: #cbced8;
@@ -37,6 +37,8 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
+    --title-span-color: #cbced8;
+    
 
 }
 .dark-theme{
@@ -54,7 +56,8 @@ const GlobalStyle = createGlobalStyle`
     --sidebar-dark-color: #191D2B;
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
-    --scrollbar-track-color: #383838;   
+    --scrollbar-track-color: #383838;
+    --title-span-color: #191D2B;  
 }
 
     *{
@@ -134,7 +137,7 @@ const GlobalStyle = createGlobalStyle`
 
   //Menu Mobile
   .ham-burger-menu{
-      position: absolute;
+      position: fixed;
       right: 5%;
       top: 3%;
       z-index: 15;

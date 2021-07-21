@@ -53,6 +53,7 @@ const TitleStyled = styled.div`
             left: 0;
             top: 30%;
             z-index: -1;
+            color:var(--title-span-color);
             @media screen and (max-width: 620px){
                 font-size: 3rem;
             }

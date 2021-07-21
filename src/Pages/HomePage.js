@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GithubIcon from '@material-ui/icons/GitHub';
-import YoutubeIcon from '@material-ui/icons/YouTube';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Particle from '../Components/Particles';
 
 
@@ -18,14 +18,14 @@ function HomePage() {
                     Experienced Information Technology with a demonstrated history of working in the telecommunications industry. Skilled in PHP, Java, React JS, Angular, Styled-Components, CSS, JavaScript and HTML. Strong in SQL & MySQL Database, professional with Engineering focused in Systems Development.
                 </p>
                 <div className="icons">
-                <a href="www" className="icon i-facebook">
+                <a href="https://web.facebook.com/gersonjose.notico/" className="icon i-facebook">
                     <FacebookIcon />
                 </a>
-                <a href="www" className="icon i-github">
+                <a href="https://github.com/gersonnotico" className="icon i-github">
                     <GithubIcon />
                 </a>
-                <a href="www" className="icon i-youtube">
-                    <YoutubeIcon />
+                <a href="https://www.linkedin.com/in/gersonotico/" className="icon i-linkdin">
+                    <LinkedInIcon />
                 </a>
             </div>
             </div>
@@ -75,13 +75,6 @@ const HomePageStyled = styled.header`
                 }
                 svg{
                     margin: 1rem;
-                }
-            }
-
-            .i-youtube{   
-                &:hover{             
-                    border: 2px solid red;
-                    color: red;
                 }
             }
         }
