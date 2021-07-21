@@ -9,10 +9,13 @@ import {Switch as Switching, Route} from 'react-router';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Switch from '@material-ui/core/Switch';
 import { useEffect, useState } from 'react';
+import MenuIcon from '@material-ui/icons/Menu';
+import { IconButton } from '@material-ui/core';
 
 function App() {
   const [theme, setTheme] = useState('dark-theme');
   const [checked, setChecked] = useState(false);
+  const [navToggle, setNavToggle] = useState(false);
 
   useEffect(()=>{
     document.documentElement.className=theme;
@@ -30,6 +33,7 @@ function App() {
 
   return (
     <div className="App">
+      <Sidebar navToggle={navToggle} />
       <div className="theme">
         <div className="light-dark-mode">
           <div className="left-content">
@@ -46,8 +50,12 @@ function App() {
             </div>
         </div>
       </div>
-
-      <Sidebar />
+      <div className="ham-burger-menu">
+        <IconButton onClick={()=>setNavToggle(!navToggle)}>
+          <MenuIcon />
+        </IconButton>
+      </div>
+      
       <MainContentStyled>
         <div className="lines">
           <div className="line-1"></div>
@@ -83,6 +91,9 @@ const MainContentStyled = styled.main`
   position: relative;
   margin-left: 16.3rem;
   min-height: 100vh;
+  @media screen and (max-width:1200px){
+    margin-left: 0;
+  }
 
   .lines{
     position: absolute;
